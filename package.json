@@ -37,7 +37,7 @@
     "build": "tsc -p tsconfig.json && tsc -p tsconfig.cjs.json && node -e \"const fs=require('fs');fs.writeFileSync('dist/cjs/package.json','{\\\"type\\\":\\\"commonjs\\\"}');fs.copyFileSync('dist/index.d.ts','dist/cjs/index.d.cts')\"",
     "prepare": "npm run build",
     "lint": "tsc -p tsconfig.json --noEmit",
-    "test": "npm run build && node --test test/"
+    "test": "npm run build && node --test test/cjs.test.cjs test/edge.test.js test/wasla.test.js"
   },
   "engines": {
     "node": ">=18"
