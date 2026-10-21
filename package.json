@@ -4,7 +4,7 @@
   "description": "Turn a title into a URL slug and keep Arabic letters.",
   "license": "MIT",
   "type": "module",
-  "author": "Pro Gineous <dev@progineous.com>",
+  "author": "Pro Gineous <github@progineous.com>",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/progineousgb/wasla.git"
