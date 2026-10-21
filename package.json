@@ -1,0 +1,46 @@
+{
+  "name": "wasla",
+  "version": "1.0.0",
+  "description": "Turn a title into a URL slug and keep Arabic letters.",
+  "license": "MIT",
+  "type": "module",
+  "author": "Pro Gineous <dev@progineous.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/progineousgb/wasla.git"
+  },
+  "homepage": "https://github.com/progineousgb/wasla#readme",
+  "bugs": {
+    "url": "https://github.com/progineousgb/wasla/issues"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepare": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test test/wasla.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  },
+  "keywords": [
+    "slug",
+    "arabic",
+    "url",
+    "title"
+  ]
+}
