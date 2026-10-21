@@ -1,6 +1,6 @@
 {
   "name": "wasla",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Turn a title into a URL slug and keep Arabic letters.",
   "license": "MIT",
   "type": "module",
@@ -22,7 +22,7 @@
         "default": "./dist/index.js"
       },
       "require": {
-        "types": "./dist/index.d.ts",
+        "types": "./dist/cjs/index.d.cts",
         "default": "./dist/cjs/index.js"
       }
     },
@@ -34,7 +34,7 @@
     "README.md"
   ],
   "scripts": {
-    "build": "tsc -p tsconfig.json && tsc -p tsconfig.cjs.json && node -e \"require('fs').writeFileSync('dist/cjs/package.json','{\\\"type\\\":\\\"commonjs\\\"}')\"",
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig.cjs.json && node -e \"const fs=require('fs');fs.writeFileSync('dist/cjs/package.json','{\\\"type\\\":\\\"commonjs\\\"}');fs.copyFileSync('dist/index.d.ts','dist/cjs/index.d.cts')\"",
     "prepare": "npm run build",
     "lint": "tsc -p tsconfig.json --noEmit",
     "test": "npm run build && node --test test/"
